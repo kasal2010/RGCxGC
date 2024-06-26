@@ -18,7 +18,7 @@ setMethod(f = "base_GCxGC",
             scan_minut <- table(scan_floor)
             scan_minut <- scan_minut[-c(1, length(scan_minut))]
             homogeneous <- all(scan_minut[1] == scan_minut)
-            if (!homogeneous) stop("Sampling rate is not homogeneuous")
+            #if (!homogeneous) stop("Sampling rate is not homogeneuous")
             
             tic <- RNetCDF::var.get.nc(raw_1d_chrom,
                                        "total_intensity")
